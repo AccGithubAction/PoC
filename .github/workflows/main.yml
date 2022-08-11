@@ -1,0 +1,72 @@
+name: Deployment
+
+on:
+  pull_request_review:
+    types: [submitted]
+    branches: [main]
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
+      - name: payload
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
+        
+      - name: sfdx installation
+        run: |
+          wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+          mkdir sfdx-cli
+          tar xJf sfdx-linux-amd64.tar.xz -C sfdx-cli --strip-components 1
+          ./sfdx-cli/install
+          
+          echo y | sfdx plugins:install sfpowerkit
+          
+      - name: create delta-package
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+        run: |
+          sfdx sfpowerkit:project:diff --revisionfrom origin/${{env.BASE_REF}} --output delta-package
+          
+      - name: create artifacts delta-package
+        uses: actions/upload-artifact@v3
+        with:
+          name: delta-package
+          path: delta-package
+          retention-days: 5
+          
+      - name: authorization
+        run: |
+          
+          echo "${{ secrets.JWTKEYFILE }}" > server.key
+          sfdx force:auth:jwt:grant --setalias MyOrg --jwtkeyfile server.key --clientid ${{ secrets.CONSUMERKEY }} -u ${{ secrets.USR }}
+          sfdx auth:list
+          
+          git --version
+          
+      - name: deployment 
+        run: |
+          
+          sfdx force:source:deploy --sourcepath delta-package/force-app -u MyOrg
+          
+      - name: merge source
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+        run: |
+          git config --global user.email "acckamil97@gmail.com"
+          git config --global user.name "acckamil97"
+          
+          git checkout origin/${{env.BASE_REF}}
+          git merge origin/${{env.HEAD_REF}} --no-commit
+          git add force-app/
+          git commit -m "merge target branch:${{env.HEAD_REF}} and source branch:${{env.BASE_REF}}"
+          git push origin HEAD:${{env.BASE_REF}}
+      
