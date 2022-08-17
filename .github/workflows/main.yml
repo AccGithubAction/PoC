@@ -55,7 +55,7 @@ jobs:
       - name: deployment 
         run: |
           
-          sfdx force:source:deploy --sourcepath delta-package/force-app -u MyOrg --runtests=RunLocalTests
+          sfdx force:source:deploy --sourcepath delta-package/force-app -u MyOrg -l RunAllTestsInOrg
           
       - name: merge source
         env:
