@@ -20,8 +20,8 @@ jobs:
           APPROVER: ${{ github.event.review.user.login }}
         run: |
           readarray identityMappings < <(yq e -o=j -I=0 '.approvers[]' approvers.yml )
-        
-          if [[ ! " ${identityMappings[*]} " =~ " "${{env.APPROVER}}" " ]]; then
+          echo ${identityMappings[0]}
+          if [[ ! " ${identityMappings[*]} " =~ " ${{env.APPROVER}} " ]]; then
               exit 1
           fi
           
