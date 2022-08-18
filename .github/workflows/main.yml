@@ -21,7 +21,7 @@ jobs:
         run: |
           readarray identityMappings < <(yq e -o=j -I=0 '.approvers[]' approvers.yml )
         
-          if [[ ! " "${identityMappings[*]}" " =~ " ${{env.APPROVER}} " ]]; then
+          if [[ ! " ${identityMappings[*]} " =~ " "${{env.APPROVER}}" " ]]; then
               exit 1
           fi
           
