@@ -74,10 +74,13 @@ jobs:
         run: |
           git config --global user.email "acckamil97@gmail.com"
           git config --global user.name "acckamil97"
-          
+          echo "### git checkout"
           git checkout origin/${{env.BASE_REF}}
+          echo "### git merge"
           git merge origin/${{env.HEAD_REF}} --no-commit
+          echo "### git add"
           git add force-app/
+          echo "### git commit"
           git commit -m "merge target branch:${{env.HEAD_REF}} and source branch:${{env.BASE_REF}}"
           git push origin HEAD:${{env.BASE_REF}}
       
