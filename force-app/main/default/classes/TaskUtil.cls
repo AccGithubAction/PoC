@@ -3,7 +3,6 @@ public class TaskUtil {
         // Validate input
         if (String.isBlank(leadState) || leadState.length() > 2) {
             return null;
-            
         }
         String taskPriority;
         if (leadState == 'CA') {
