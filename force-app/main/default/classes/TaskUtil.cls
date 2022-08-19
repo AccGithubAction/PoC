@@ -7,6 +7,7 @@ public class TaskUtil {
         }
         String taskPriority;
         if (leadState == 'CA') {
+            
              taskPriority = 'High'; 
         } else {
              taskPriority = 'Normal';
