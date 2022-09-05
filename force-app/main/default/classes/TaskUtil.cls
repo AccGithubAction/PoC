@@ -10,7 +10,6 @@ public class TaskUtil {
         } else {
              taskPriority = 'Normal';
         }
-        
         return taskPriority;
     }
 }
