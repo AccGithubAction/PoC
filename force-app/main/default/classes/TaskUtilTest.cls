@@ -8,8 +8,12 @@ private class TaskUtilTest {
         String pri = TaskUtil.getTaskPriority('CA');
         System.assertEquals('High', pri);
     }
-    @isTest static void testTaskPriorityInvalid() {
+    @isTest static void testTaskPriorityInvalidFirst() {
         String pri = TaskUtil.getTaskPriority('Montana');
+        System.assertEquals(null, pri);
+    }
+    @isTest static void testTaskPriorityInvalidSecond() {
+        String pri = TaskUtil.getTaskPriority('Warsaw');
         System.assertEquals(null, pri);
     }
 }
