@@ -1,0 +1,503 @@
+{
+  "status": 0,
+  "result": {
+    "checkOnly": false,
+    "completedDate": "2022-09-23T11:56:49.000Z",
+    "createdBy": "0057Q000001RjgD",
+    "createdByName": "Kamil Walo",
+    "createdDate": "2022-09-23T11:56:44.000Z",
+    "details": {
+      "componentSuccesses": [
+        {
+          "changed": false,
+          "componentType": "ApexClass",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "classes/TaskUtil.cls",
+          "fullName": "TaskUtil",
+          "id": "01p7Q00000O0jiiQAB",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "ApexClass",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "classes/TaskUtilTest.cls",
+          "fullName": "TaskUtilTest",
+          "id": "01p7Q00000O0jijQAB",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "ApexClass",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "classes/TemperatureConverter.cls",
+          "fullName": "TemperatureConverter",
+          "id": "01p7Q00000O0jikQAB",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "ApexClass",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "classes/TemperatureConverterTest.cls",
+          "fullName": "TemperatureConverterTest",
+          "id": "01p7Q00000OZgYcQAL",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Certificate",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "certs/githubAction.crt",
+          "fullName": "githubAction",
+          "id": "0P17Q00000CxwBFSAZ",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "package.xml",
+          "fullName": "package.xml",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "CustomObject",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "objects/DummyObject__c.object",
+          "fullName": "DummyObject__c",
+          "id": "01I7Q000001j8kUUAQ",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "CustomObject",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "objects/PoC__c.object",
+          "fullName": "PoC__c",
+          "id": "01I7Q000001j1NfUAI",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "CustomObject",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "objects/customObject__c.object",
+          "fullName": "customObject__c",
+          "id": "01I7Q000001j1N6UAI",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "Workflow",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "workflows/Case.workflow",
+          "fullName": "Case",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "WorkflowFieldUpdate",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "workflows/Case.workflow",
+          "fullName": "Case.ChangePriorityToHigh",
+          "id": "04Y7Q0000004eitUAA",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "LightningComponentBundle",
+          "created": false,
+          "createdDate": "2022-09-23T11:56:48.000Z",
+          "deleted": false,
+          "fileName": "lwc/helloWorld",
+          "fullName": "helloWorld",
+          "id": "0Rb7Q0000019kfzSAA",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "codeCoverage": [
+          {
+            "id": "01p7Q00000O0jikQAB",
+            "name": "TemperatureConverter",
+            "namespace": null,
+            "numLocations": 3,
+            "numLocationsNotCovered": 0,
+            "type": "Class",
+            "dmlInfo": [],
+            "locationsNotCovered": [],
+            "methodInfo": [],
+            "soqlInfo": [],
+            "soslInfo": []
+          },
+          {
+            "id": "01p7Q00000O0jiiQAB",
+            "name": "TaskUtil",
+            "namespace": null,
+            "numLocations": 8,
+            "numLocationsNotCovered": 0,
+            "type": "Class",
+            "dmlInfo": [],
+            "locationsNotCovered": [],
+            "methodInfo": [],
+            "soqlInfo": [],
+            "soslInfo": []
+          }
+        ],
+        "numFailures": 0,
+        "numTestsRun": 7,
+        "successes": [
+          {
+            "id": "01p7Q00000O0jijQAB",
+            "methodName": "testTaskPriority",
+            "name": "TaskUtilTest",
+            "namespace": null,
+            "time": 48
+          },
+          {
+            "id": "01p7Q00000O0jijQAB",
+            "methodName": "testTaskHighPriority",
+            "name": "TaskUtilTest",
+            "namespace": null,
+            "time": 18
+          },
+          {
+            "id": "01p7Q00000OZgYcQAL",
+            "methodName": "testFreezingPoint",
+            "name": "TemperatureConverterTest",
+            "namespace": null,
+            "time": 49
+          },
+          {
+            "id": "01p7Q00000OZgYcQAL",
+            "methodName": "testNegativeTemp",
+            "name": "TemperatureConverterTest",
+            "namespace": null,
+            "time": 55
+          },
+          {
+            "id": "01p7Q00000OZgYcQAL",
+            "methodName": "testWarmTemp",
+            "name": "TemperatureConverterTest",
+            "namespace": null,
+            "time": 64
+          },
+          {
+            "id": "01p7Q00000O0jijQAB",
+            "methodName": "testTaskPriorityInvalidFirst",
+            "name": "TaskUtilTest",
+            "namespace": null,
+            "time": 52
+          },
+          {
+            "id": "01p7Q00000OZgYcQAL",
+            "methodName": "testBoilingPoint",
+            "name": "TemperatureConverterTest",
+            "namespace": null,
+            "time": 45
+          }
+        ],
+        "totalTime": 369,
+        "codeCoverageWarnings": [],
+        "failures": [],
+        "flowCoverage": [],
+        "flowCoverageWarnings": []
+      },
+      "componentFailures": []
+    },
+    "done": true,
+    "id": "0Af7Q00000NM6HxSAL",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2022-09-23T11:56:49.000Z",
+    "numberComponentErrors": 0,
+    "numberComponentsDeployed": 11,
+    "numberComponentsTotal": 11,
+    "numberTestErrors": 0,
+    "numberTestsCompleted": 7,
+    "numberTestsTotal": 7,
+    "rollbackOnError": true,
+    "runTestsEnabled": true,
+    "startDate": "2022-09-23T11:56:45.000Z",
+    "status": "Succeeded",
+    "success": true,
+    "deployedSource": [],
+    "outboundFiles": [],
+    "deploys": [
+      {
+        "checkOnly": false,
+        "completedDate": "2022-09-23T11:56:49.000Z",
+        "createdBy": "0057Q000001RjgD",
+        "createdByName": "Kamil Walo",
+        "createdDate": "2022-09-23T11:56:44.000Z",
+        "details": {
+          "componentSuccesses": [
+            {
+              "changed": false,
+              "componentType": "ApexClass",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "classes/TaskUtil.cls",
+              "fullName": "TaskUtil",
+              "id": "01p7Q00000O0jiiQAB",
+              "success": true
+            },
+            {
+              "changed": false,
+              "componentType": "ApexClass",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "classes/TaskUtilTest.cls",
+              "fullName": "TaskUtilTest",
+              "id": "01p7Q00000O0jijQAB",
+              "success": true
+            },
+            {
+              "changed": false,
+              "componentType": "ApexClass",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "classes/TemperatureConverter.cls",
+              "fullName": "TemperatureConverter",
+              "id": "01p7Q00000O0jikQAB",
+              "success": true
+            },
+            {
+              "changed": false,
+              "componentType": "ApexClass",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "classes/TemperatureConverterTest.cls",
+              "fullName": "TemperatureConverterTest",
+              "id": "01p7Q00000OZgYcQAL",
+              "success": true
+            },
+            {
+              "changed": true,
+              "componentType": "Certificate",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "certs/githubAction.crt",
+              "fullName": "githubAction",
+              "id": "0P17Q00000CxwBFSAZ",
+              "success": true
+            },
+            {
+              "changed": true,
+              "componentType": "",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "package.xml",
+              "fullName": "package.xml",
+              "success": true
+            },
+            {
+              "changed": false,
+              "componentType": "CustomObject",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "objects/DummyObject__c.object",
+              "fullName": "DummyObject__c",
+              "id": "01I7Q000001j8kUUAQ",
+              "success": true
+            },
+            {
+              "changed": false,
+              "componentType": "CustomObject",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "objects/PoC__c.object",
+              "fullName": "PoC__c",
+              "id": "01I7Q000001j1NfUAI",
+              "success": true
+            },
+            {
+              "changed": false,
+              "componentType": "CustomObject",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "objects/customObject__c.object",
+              "fullName": "customObject__c",
+              "id": "01I7Q000001j1N6UAI",
+              "success": true
+            },
+            {
+              "changed": false,
+              "componentType": "Workflow",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "workflows/Case.workflow",
+              "fullName": "Case",
+              "success": true
+            },
+            {
+              "changed": false,
+              "componentType": "WorkflowFieldUpdate",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "workflows/Case.workflow",
+              "fullName": "Case.ChangePriorityToHigh",
+              "id": "04Y7Q0000004eitUAA",
+              "success": true
+            },
+            {
+              "changed": true,
+              "componentType": "LightningComponentBundle",
+              "created": false,
+              "createdDate": "2022-09-23T11:56:48.000Z",
+              "deleted": false,
+              "fileName": "lwc/helloWorld",
+              "fullName": "helloWorld",
+              "id": "0Rb7Q0000019kfzSAA",
+              "success": true
+            }
+          ],
+          "runTestResult": {
+            "codeCoverage": [
+              {
+                "id": "01p7Q00000O0jikQAB",
+                "name": "TemperatureConverter",
+                "namespace": null,
+                "numLocations": 3,
+                "numLocationsNotCovered": 0,
+                "type": "Class",
+                "dmlInfo": [],
+                "locationsNotCovered": [],
+                "methodInfo": [],
+                "soqlInfo": [],
+                "soslInfo": []
+              },
+              {
+                "id": "01p7Q00000O0jiiQAB",
+                "name": "TaskUtil",
+                "namespace": null,
+                "numLocations": 8,
+                "numLocationsNotCovered": 0,
+                "type": "Class",
+                "dmlInfo": [],
+                "locationsNotCovered": [],
+                "methodInfo": [],
+                "soqlInfo": [],
+                "soslInfo": []
+              }
+            ],
+            "numFailures": 0,
+            "numTestsRun": 7,
+            "successes": [
+              {
+                "id": "01p7Q00000O0jijQAB",
+                "methodName": "testTaskPriority",
+                "name": "TaskUtilTest",
+                "namespace": null,
+                "time": 48
+              },
+              {
+                "id": "01p7Q00000O0jijQAB",
+                "methodName": "testTaskHighPriority",
+                "name": "TaskUtilTest",
+                "namespace": null,
+                "time": 18
+              },
+              {
+                "id": "01p7Q00000OZgYcQAL",
+                "methodName": "testFreezingPoint",
+                "name": "TemperatureConverterTest",
+                "namespace": null,
+                "time": 49
+              },
+              {
+                "id": "01p7Q00000OZgYcQAL",
+                "methodName": "testNegativeTemp",
+                "name": "TemperatureConverterTest",
+                "namespace": null,
+                "time": 55
+              },
+              {
+                "id": "01p7Q00000OZgYcQAL",
+                "methodName": "testWarmTemp",
+                "name": "TemperatureConverterTest",
+                "namespace": null,
+                "time": 64
+              },
+              {
+                "id": "01p7Q00000O0jijQAB",
+                "methodName": "testTaskPriorityInvalidFirst",
+                "name": "TaskUtilTest",
+                "namespace": null,
+                "time": 52
+              },
+              {
+                "id": "01p7Q00000OZgYcQAL",
+                "methodName": "testBoilingPoint",
+                "name": "TemperatureConverterTest",
+                "namespace": null,
+                "time": 45
+              }
+            ],
+            "totalTime": 369,
+            "codeCoverageWarnings": [],
+            "failures": [],
+            "flowCoverage": [],
+            "flowCoverageWarnings": []
+          },
+          "componentFailures": []
+        },
+        "done": true,
+        "id": "0Af7Q00000NM6HxSAL",
+        "ignoreWarnings": false,
+        "lastModifiedDate": "2022-09-23T11:56:49.000Z",
+        "numberComponentErrors": 0,
+        "numberComponentsDeployed": 11,
+        "numberComponentsTotal": 11,
+        "numberTestErrors": 0,
+        "numberTestsCompleted": 7,
+        "numberTestsTotal": 7,
+        "rollbackOnError": true,
+        "runTestsEnabled": true,
+        "startDate": "2022-09-23T11:56:45.000Z",
+        "status": "Succeeded",
+        "success": true,
+        "deployedSource": [],
+        "outboundFiles": []
+      }
+    ],
+    "coverage": {}
+  },
+  "warnings": [
+    "apiVersion configuration overridden at \"55.0\""
+  ]
+}

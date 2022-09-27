@@ -8,10 +8,6 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>githubAction</members>
-        <name>Certificate</name>
-    </types>
-    <types>
         <members>DummyObject__c</members>
         <members>PoC__c</members>
         <members>customObject__c</members>
@@ -20,14 +16,6 @@
     <types>
         <members>helloWorld</members>
         <name>LightningComponentBundle</name>
-    </types>
-    <types>
-        <members>Case</members>
-        <name>Workflow</name>
-    </types>
-    <types>
-        <members>Case.ChangePriorityToHigh</members>
-        <name>WorkflowFieldUpdate</name>
     </types>
     <version>54.0</version>
 </Package>
